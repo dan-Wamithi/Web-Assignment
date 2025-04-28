@@ -48,7 +48,7 @@ ul {
     padding: 0 20px;
 }
 
-.btn {
+.button {
     display: inline-block;
     padding: 12px 30px;
     border-radius: 50px;
@@ -57,22 +57,22 @@ ul {
     transition: var(--transition);
 }
 
-.btn-primary {
+.primary-button {
     background-color: var(--primary-color);
     color: var(--white);
 }
 
-.btn-primary:hover {
+.primary-button:hover {
     background-color: #157a60;
 }
 
-.btn-secondary {
+.secondary-button {
     background-color: var(--white);
     color: var(--text-color);
     border: 1px solid var(--border-color);
 }
 
-.btn-secondary:hover {
+.secondary-button:hover {
     background-color: var(--light-bg);
 }
 
@@ -371,38 +371,31 @@ header .container {
     font-weight: 600;
     margin-right: 10px;
 }
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: #f9f9f9;
-}
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 0;
+
+.social-links {
+    margin-top: 30px;
 }
 
-/* Section Titles */
-.section-title, .subtitle {
-    text-align: center;
-    margin-bottom: 20px;
+.social-links span {
+    font-weight: 500;
+    margin-right: 10px;
 }
-.section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
+
+.social-link {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+    color: var(--light-text);
 }
-.subtitle {
-    font-size: 1.2rem;
-    color: #6c63ff;
-    text-transform: uppercase;
+
+.social-link:hover {
+    color: var(--primary-color);
+}
+
+.biography-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
 }
 
 /* Skills Section */
@@ -410,273 +403,125 @@ body {
     background: #fff;
     padding: 80px 0;
 }
-.skills-images {
+
+.skills-section .container {
     display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
+    gap: 50px;
+    align-items: center;
 }
-.skill-image-top, .skill-image-bottom {
-    width: 150px;
-    height: 150px;
-    background: url('https://img.freepik.com/free-photo/close-up-man-repairing-computer-chips_23-2150880932.jpg?t=st=1745829731~exp=1745833331~hmac=4813b5e6d895659a0b95c90836ae0dcb6eb9c73acc704a4e73fb18f9f0d259a6&w=996') no-repeat center/cover;
-    margin: 10px;
+
+.skills-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.skill-image-top,
+.skill-image-bottom {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.skill-image-top {
+    background-image: url('https://img.freepik.com/free-photo/close-up-man-repairing-computer-chips_23-2150880932.jpg?t=st=1745829731~exp=1745833331~hmac=4813b5e6d895659a0b95c90836ae0dcb6eb9c73acc704a4e73fb18f9f0d259a6&w=996');
+}
+
+.skill-image-bottom {
+    background-image: url('https://img.freepik.com/free-photo/programming-concept-with-laptop-code_23-2148828831.jpg?t=st=1745830033~exp=1745833633~hmac=c45f9b2916c195111a671959b6a8583c44a314171a72d868819609387845889b&w=996');
+}
+
+.skills-content {
+    flex: 1;
+}
+
 .skills-content p {
-    max-width: 700px;
-    margin: 20px auto;
-    text-align: center;
-    color: #555;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: var(--light-text);
 }
+
 .skill-bars {
     margin-top: 40px;
 }
+
 .skill-bar {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
+
 .skill-info {
     display: flex;
     justify-content: space-between;
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 8px;
 }
+
 .skill-progress {
-    background: #eee;
-    height: 8px;
+    background: var(--light-bg);
+    height: 10px;
     border-radius: 5px;
     overflow: hidden;
 }
+
 .skill-progress .progress {
     height: 100%;
-    background: linear-gradient(90deg, #6c63ff, #7d6cff);
+    background-color: var(--primary-color);
+    border-radius: 5px;
 }
 
 /* Expertise Section */
 .expertise-section {
-    background: #f0f0f0;
-    padding: 80px 0;
+    background: var(--light-bg);
+    padding: 100px 0;
 }
-.expertise-grid {
+
+.expertise-section .container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
+    align-items: center;
 }
+
 .expertise-content {
-    flex: 1 1 60%;
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 30px;
 }
+
 .expertise-item {
-    background: #fff;
-    padding: 20px;
+    background: var(--white);
+    padding: 25px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s;
 }
+
 .expertise-item:hover {
     transform: translateY(-5px);
 }
-.expertise-icon i {
-    font-size: 2.5rem;
-    color: #6c63ff;
+
+.expertise-icon {
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.expertise-item h3 {
+    font-size: 20px;
     margin-bottom: 10px;
 }
-.stats-counter {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 60px;
-}
-.stat-item {
-    text-align: center;
-}
-.stat-item h3 {
-    font-size: 2rem;
-    color: #6c63ff;
+
+.expertise-item p {
+    color: var(--light-text);
 }
 
-/* Portfolio Section */
-.portfolio-section {
-    background: #fff;
-    padding: 80px 0;
-}
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-.portfolio-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-.portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.portfolio-overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(108,99,255,0.8);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    opacity: 0;
-    transition: 0.3s;
-}
-.portfolio-item:hover .portfolio-overlay {
-    opacity: 1;
-}
-.view-project {
-    margin-top: 10px;
-    background: #fff;
-    color: #6c63ff;
-    padding: 8px 16px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Blog Section */
-.blog-section {
-    background: #f9f9f9;
-    padding: 80px 0;
-}
-.blog-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-.blog-card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    flex: 1 1 30%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-}
-.blog-card:hover {
-    transform: translateY(-5px);
-}
-.blog-image img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-.blog-content {
-    padding: 20px;
-}
-.blog-content h3 {
-    margin: 10px 0;
-}
-.read-more {
-    display: inline-block;
-    margin-top: 10px;
-    color: #6c63ff;
-    text-decoration: none;
-}
-
-/* Contact Section */
-.contact-section {
-    background: #fff;
-    padding: 80px 0;
-}
-.contact-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-.contact-info {
-    flex: 1 1 40%;
-}
-.contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.contact-icon i {
-    font-size: 1.5rem;
-    color: #6c63ff;
-    margin-right: 15px;
-}
-.contact-form {
-    flex: 1 1 50%;
-}
-.form-group {
-    margin-bottom: 20px;
-}
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.btn-primary {
-    background: #6c63ff;
-    color: #fff;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-.btn-primary:hover {
-    background: #5a54e0;
-}
-
-/* Certifications Section */
-.certifications-section {
-    background: #f0f0f0;
-    padding: 60px 0;
-}
-.certification-logos {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-.certification-logo img {
-    max-height: 80px;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: #ccc;
-    padding: 40px 0;
-}
-.footer-top {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.logo a {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-}
-.social-links a {
-    color: #ccc;
-    margin: 0 10px;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-.social-links a:hover {
-    color: #6c63ff;
-}
+.expertise-image {
+    flex: 1;
+    background-image: url('https://img.freepik.com/free-photo/young-man-working-home-using-computer_23-2147909749.jpg?t=st=1745830148~exp=1745833748~hmac=a6a03e931c919c13829e45e09a65
