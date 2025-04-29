@@ -1,4 +1,82 @@
 /* General Styles */
+
+/* Styles for screens smaller than 768px (typical for tablets) */
+@media (max-width: 767px) {
+    .container {
+        width: 100%; /* Make container full-width on smaller screens */
+        padding: 0 15px; /* Adjust padding */
+    }
+
+    .nav-menu {
+        display: none; /* Hide desktop navigation */
+    }
+
+    .hamburger {
+        display: block; /* Show mobile menu button */
+    }
+
+    .hero-modern {
+        flex-direction: column; /* Stack hero content vertically */
+        text-align: center;
+    }
+
+    .hero-image-container {
+        order: -1; /* Move image above text on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack services vertically */
+    }
+
+    /* ... other mobile-specific styles ... */
+}
+
+/* Styles for screens between 768px and 991px (typical for larger tablets/small laptops) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 90%; /* Slightly narrower container */
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two services per row */
+    }
+
+    /* ... tablet-specific styles ... */
+}
+
+/* Styles for screens 992px and larger (typical for desktops) */
+@media (min-width: 992px) {
+    .container {
+        width: 1140px; /* Fixed or larger width for desktops */
+    }
+
+    .nav-menu {
+        display: flex; /* Show desktop navigation */
+    }
+
+    .hamburger {
+        display: none; /* Hide mobile menu button */
+    }
+
+    .hero-modern {
+        flex-direction: row; /* Keep hero content side-by-side */
+        text-align: left;
+    }
+
+    .hero-image-container {
+        order: 0; /* Keep image on the right */
+        margin-bottom: 0;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three services per row */
+    }
+}
+
+
+
+
 body {
     font-family: sans-serif;
     margin: 0;
